@@ -10,4 +10,13 @@ Synonyms for concatenate: stitch combine aggregate add together
 - Put the kml or kmz files in a directory called data.
 - In a terminal, navigate to the directory ABOVE /data.
 - Run the script.
-  - <emphasis>i.e.</emphasis> type <pre>kmlstitch</pre>
+  - _i.e._ type <pre>kmlstitch</pre>
+
+The results is a zipped file called 'alltracks'.
+- Raw data files are not harmed but files called 'doc.kml' in the data directory will be deleted.
+- Edit the script to change the source data directory.
+
+### Future features
+- manage embedded pictures
+- 
+
