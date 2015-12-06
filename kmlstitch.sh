@@ -23,11 +23,12 @@ unzipKmz()
 extractTrack()
 {
     if [ -f doc.kml ]
-    then    #
+    then    # look for instances of the 'placemark' tag in the file
         placelines=$( lineNums placemark doc.kml)
         startline=$(echo $placelines | cut -d ' ' -f 1 )
         endline=$(echo $placelines | rev | cut -d ' ' -f 1 | rev)
         echo $FUNCNAME
+        # write the contents of the placemark tag to the output file
         sed -n "${startline},${endline}p" doc.kml >> ${outfile}
         echo $FUNCNAME: placelines: $placelines
         echo startline: $startline
